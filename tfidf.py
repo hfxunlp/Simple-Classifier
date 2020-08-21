@@ -128,7 +128,7 @@ def handle(srcf, modelf, norm_feat=False, norm_bias=True):
 	model = buildtfidf(feat_freq, feat_n)
 
 	if norm_bias:
-		class_n = norm(class_n, ndata)
+		class_n = norm(class_freq, ndata)
 
 	ens = "\n".encode("utf-8")
 	with open(modelf, "wb") as f:
